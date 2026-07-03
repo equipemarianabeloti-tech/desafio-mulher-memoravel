@@ -5,6 +5,162 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Desafio Mulher Memorável | Mari Beloti</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+/* =========================
+   MOBILE FIRST - AJUSTES
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    order: 2;
+    padding: 34px 22px 42px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .visual {
+    order: 1;
+    min-height: 52vh;
+    height: 52vh;
+    padding: 0 !important;
+  }
+
+  .visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 0.95;
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 15.5px;
+    margin-top: 20px;
+    max-width: 340px;
+  }
+
+  .gold-line {
+    margin: 22px auto;
+  }
+
+  .pill-row {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .pill {
+    font-size: 9.5px;
+    padding: 8px 11px;
+  }
+
+  .section,
+  .form-section,
+  .final {
+    padding: 54px 20px;
+  }
+
+  .head {
+    display: block;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .head p {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 24px;
+    min-height: auto;
+    border-radius: 22px;
+  }
+
+  .card h3 {
+    font-size: 27px;
+  }
+
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .form-copy {
+    padding: 30px 24px;
+    border-radius: 26px;
+    text-align: center;
+  }
+
+  .form-copy h2 {
+    font-size: 38px;
+  }
+
+  .form-copy p {
+    font-size: 14.5px;
+  }
+
+  .form-card {
+    padding: 26px 20px;
+    border-radius: 26px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+
+  button {
+    padding: 17px;
+    font-size: 11px;
+  }
+
+  .final {
+    min-height: auto;
+    text-align: center;
+  }
+
+  .final h2 {
+    font-size: 40px;
+  }
+
+  .final p {
+    font-size: 15.5px;
+  }
+}
+    
 <style>
 :root{--black:#181818;--off:#f8f5f1;--nude:#ece2d9;--gold:#b79b6c;--gold2:#d8c295;--white:#fff;--muted:#777;--line:#ded5cb}
 *{box-sizing:border-box}body{margin:0;font-family:Montserrat,Arial,sans-serif;background:var(--off);color:var(--black);line-height:1.55}
