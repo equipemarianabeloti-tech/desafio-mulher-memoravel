@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafio Mulher Memorável | Mari Beloti</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#181818;--off:#f8f5f1;--nude:#ece2d9;--gold:#b79b6c;--gold2:#d8c295;--white:#fff;--muted:#777;--line:#ded5cb}
+*{box-sizing:border-box}body{margin:0;font-family:Montserrat,Arial,sans-serif;background:var(--off);color:var(--black);line-height:1.55}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;background:var(--black);color:var(--white)}
+.hero-content{padding:10vh 7vw 8vh;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:.24em;font-size:12px;font-weight:800;margin-bottom:24px}
+h1,h2,h3{font-family:"Playfair Display",serif;margin:0;line-height:1.03;letter-spacing:-.035em}
+h1{font-size:clamp(52px,8vw,104px);max-width:760px}.hero p{max-width:620px;color:#e9dfd4;font-size:18px;margin:28px 0 0}
+.gold-line{width:80px;height:2px;background:var(--gold);margin:30px 0}.pill-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.pill{border:1px solid rgba(216,194,149,.7);color:var(--gold2);border-radius:999px;padding:10px 15px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.visual{min-height:100vh;background:linear-gradient(180deg,rgba(24,24,24,.06),rgba(24,24,24,.45)),radial-gradient(circle at 50% 35%,rgba(213,192,150,.35),transparent 36%),linear-gradient(135deg,#eadfd5,#bfa98a 42%,#27221e);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:7vw}
+.visual:before{content:"";position:absolute;inset:8%;border:1px solid rgba(255,255,255,.38);border-radius:32px}.visual-note{position:relative;z-index:2;max-width:340px;color:rgba(255,255,255,.82);font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.section{padding:90px 7vw}.container{max-width:1160px;margin:0 auto}.head{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end;margin-bottom:54px}
+h2{font-size:clamp(36px,5vw,66px)}.head p{color:var(--muted);font-size:17px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:28px;padding:30px;min-height:210px;box-shadow:0 18px 50px rgba(24,24,24,.06)}
+.card h3{font-size:28px;margin-bottom:12px}.card p{color:var(--muted);font-size:14.5px;margin:0}
+.form-section{background:var(--nude);padding:90px 7vw}.form-wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:.95fr 1.05fr;gap:36px;align-items:stretch}
+.form-copy{background:var(--black);color:var(--white);border-radius:34px;padding:42px;position:relative;overflow:hidden}.form-copy:after{content:"";position:absolute;width:240px;height:240px;right:-80px;bottom:-90px;border-radius:50%;background:rgba(183,155,108,.22)}
+.form-copy h2{font-size:clamp(36px,5vw,60px)}.form-copy p{color:#d8d0c4;font-size:16px}.form-card{background:var(--white);border:1px solid var(--line);border-radius:34px;padding:42px;box-shadow:0 20px 60px rgba(24,24,24,.08)}
+label{display:block;font-weight:700;font-size:13px;margin:18px 0 8px}input{width:100%;border:1px solid #ddd2c7;background:#fbfaf8;border-radius:16px;padding:16px;font-size:15px;font-family:Montserrat,Arial,sans-serif;outline:none}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(183,155,108,.15)}button{width:100%;margin-top:24px;border:none;background:var(--gold);color:var(--black);border-radius:999px;padding:17px 22px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-size:12px}
+.privacy{margin-top:16px;color:var(--muted);font-size:12px;text-align:center}.success,.error{display:none;margin-top:18px;padding:14px;border-radius:16px;font-size:13px;font-weight:700}.success{background:#e8f2ec;color:#28513a}.error{background:#f7e7e7;color:#7a2e2e}
+.final{min-height:62vh;display:flex;align-items:center;background:var(--black);color:var(--white);padding:90px 7vw}.final h2{font-size:clamp(44px,7vw,86px);max-width:920px}.final p{color:#d8d0c4;max-width:650px;font-size:18px}
+@media(max-width:900px){.hero,.head,.cards,.form-wrap{grid-template-columns:1fr}.visual{min-height:45vh}.section,.form-section,.final{padding:70px 6vw}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="hero-content">
+<div class="eyebrow">Desafio gratuito · Vagas limitadas</div>
+<h1>Desafio Mulher Memorável</h1>
+<p>3 dias para começar a transformar sua imagem, sua autoestima e a forma como você se posiciona no mundo.</p>
+<div class="gold-line"></div>
+<div class="pill-row"><div class="pill">Imagem</div><div class="pill">Autoestima</div><div class="pill">Posicionamento</div><div class="pill">Grupo VIP</div></div>
+</div>
+<div class="hero-visual">
+
+    <img src="editorial_mari_beloti.jpeg" alt="Mari Beloti">
+
+</div>
+</header>
+<section class="section"><div class="container"><div class="head"><div><div class="eyebrow">O que você vai viver</div><h2>Não é sobre roupa. É sobre presença.</h2></div><p>O desafio foi criado para mulheres que querem parar de se esconder, entender o poder da própria imagem e começar a se enxergar como protagonistas.</p></div>
+<div class="cards"><div class="card"><h3 style="text-align: center;">Dia 1</h3  style="text-align: center;"><p  style="text-align: center;">Quem é a mulher que você vê no espelho? Uma imersão sobre identidade, autoestima e autoconceito.</p  style="text-align: center;"></div><div class="card"><h3  style="text-align: center;">Dia 2</h3  style="text-align: center;"><p  style="text-align: center;">A roupa comunica antes da sua boca. Entenda como sua imagem influencia percepção, presença e confiança.</p  style="text-align: center;"></div><div class="card"><h3  style="text-align: center;">Dia 3</h3  style="text-align: center;"><p  style="text-align: center;">Como construir uma imagem elegante e autêntica sem depender de dinheiro, corpo perfeito ou guarda-roupa novo.</p  style="text-align: center;"></div></div></div></section>
+<section class="form-section" id="inscricao"><div class="form-wrap"><div class="form-copy"><div class="eyebrow">Inscrição</div><h2>Entre para o grupo VIP do desafio.</h2><p>Preencha seus dados para receber o acesso ao grupo exclusivo com os avisos, conteúdos e orientações do Desafio Mulher Memorável.</p><div class="gold-line"></div><p><strong>Você não nasceu para passar despercebida.</strong></p></div>
+<div class="form-card"><form id="leadForm"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" placeholder="Digite seu nome" required><label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="Digite seu melhor e-mail" required><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" placeholder="(00) 00000-0000" required><button type="submit">Quero participar do desafio</button><div class="success" id="successMsg">Inscrição realizada com sucesso! Aguarde o redirecionamento para o grupo.</div><div class="error" id="errorMsg">Não foi possível enviar sua inscrição. Tente novamente.</div><div class="privacy">Seus dados serão usados apenas para comunicação sobre o desafio.</div></form></div></div></section>
+<section class="final"><div class="container"><div class="eyebrow">Convite final</div><h2>Vista a mulher que você decidiu se tornar.</h2><p>O primeiro passo é entrar para o grupo e viver os 3 dias de transformação com a Mari Beloti.</p></div></section>
+<script>
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyXJuv28EeLh1F3MDBHmO2Lx3ZPlggABzPj0Gey6kmmSZC3nfYy5K_udQ5_5pCoIQmY/exec";
+const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/JZCFAoOAg5y5RXQ3g8NR1Y?mode=gi_t";
+const form=document.getElementById("leadForm"),successMsg=document.getElementById("successMsg"),errorMsg=document.getElementById("errorMsg");
+form.addEventListener("submit",async function(e){e.preventDefault();successMsg.style.display="none";errorMsg.style.display="none";
+const data={nome:document.getElementById("nome").value.trim(),email:document.getElementById("email").value.trim(),whatsapp:document.getElementById("whatsapp").value.trim(),origem:"Landing Page - Desafio Mulher Memorável",data_envio:new Date().toLocaleString("pt-BR")};
+try{await fetch(GOOGLE_SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});successMsg.style.display="block";form.reset();setTimeout(()=>{if(WHATSAPP_GROUP_LINK&&!WHATSAPP_GROUP_LINK.includes("COLE_AQUI")){window.location.href=WHATSAPP_GROUP_LINK}},1200)}catch(error){errorMsg.style.display="block"}});
+</script>
+</body></html>

@@ -1,0 +1,22 @@
+PASSO A PASSO PARA CONECTAR AO GOOGLE SHEETS
+
+1. Crie uma planilha no Google Drive.
+2. Na primeira linha, coloque:
+   Data | Nome | Email | WhatsApp | Origem | Data de Envio
+
+3. Na planilhaDATA, clique em Extensões > Apps Script.
+4. Apague o código existente e cole o conteúdo do arquivo google_apps_script.js.
+5. Clique em Implantar > Nova implantação.
+6. Tipo: Aplicativo da Web.
+7. Executar como: Você.
+8. Quem pode acessar: Qualquer pessoa.
+9. Clique em Implantar e copie a URL do Web App.
+
+10. No arquivo index.html, substitua:
+    COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT
+
+11. Substitua:
+    COLE_AQUI_O_LINK_DO_GRUPO
+    pelo link do grupo de WhatsApp.
+
+12. Publique o index.html na sua hospedagem, Wix, WordPress ou servidor.
