@@ -1103,7 +1103,14 @@
             <input id="whatsapp" name="whatsapp" type="tel" placeholder="(00) 00000-0000" required />
           </div>
 
-          <button class="btn" type="submit">Quero garantir minha vaga</button>
+          <input type="hidden" id="origem" name="origem" value="Landing Page Imersão Mulher Memorável" />
+
+          <button class="btn" id="submitButton" type="submit">
+            Quero garantir minha vaga por R$ 79,90
+          </button>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
           <p class="privacy">Ao continuar, você concorda em receber informações relacionadas à imersão. Seus dados serão protegidos e não serão compartilhados.</p>
         </form>
       </div>
@@ -1129,7 +1136,7 @@
       4. Cole abaixo a URL terminada em /exec.
       5. Insira também o link do checkout/pagamento.
     */
-    const GOOGLE_APPS_SCRIPT_URL = 'COLE_AQUI_A_URL_DO_WEB_APP';
+    const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXJuv28EeLh1F3MDBHmO2Lx3ZPlggABzPj0Gey6kmmSZC3nfYy5K_udQ5_5pCoIQmY/exec';
     const LINK_DE_PAGAMENTO = 'COLE_AQUI_O_LINK_DE_PAGAMENTO';
 
     const phoneInput = document.getElementById('whatsapp');
@@ -1158,6 +1165,7 @@
 
       if (GOOGLE_APPS_SCRIPT_URL.includes('COLE_AQUI')) {
         formStatus.className = 'form-status error';
+        formStatus.style.display = 'block';
         formStatus.textContent = 'A URL do Google Apps Script ainda precisa ser configurada no arquivo HTML.';
         return;
       }
@@ -1166,13 +1174,14 @@
         nome: document.getElementById('nome').value.trim(),
         email: document.getElementById('email').value.trim(),
         whatsapp: document.getElementById('whatsapp').value.trim(),
-        origem: document.getElementById('origem').value,
+        origem: document.getElementById('origem')?.value || 'Landing Page Imersão Mulher Memorável',
         data_envio: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
       };
 
       submitButton.disabled = true;
       submitButton.textContent = 'Registrando seus dados...';
       formStatus.className = 'form-status';
+      formStatus.style.display = 'none';
       formStatus.textContent = '';
 
       try {
@@ -1184,7 +1193,10 @@
         });
 
         formStatus.className = 'form-status success';
-        formStatus.textContent = 'Dados registrados! Você será direcionada para concluir sua inscrição.';
+        formStatus.style.display = 'block';
+        formStatus.textContent = LINK_DE_PAGAMENTO.includes('COLE_AQUI')
+          ? 'Cadastro recebido com sucesso!'
+          : 'Cadastro recebido! Você será direcionada para concluir sua inscrição.';
         leadForm.reset();
 
         setTimeout(function () {
@@ -1197,6 +1209,7 @@
         }, 900);
       } catch (error) {
         formStatus.className = 'form-status error';
+        formStatus.style.display = 'block';
         formStatus.textContent = 'Não foi possível registrar seus dados. Verifique sua conexão e tente novamente.';
         submitButton.disabled = false;
         submitButton.textContent = 'Quero garantir minha vaga por R$ 79,90';
